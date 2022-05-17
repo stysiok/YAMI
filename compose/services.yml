@@ -1,0 +1,42 @@
+version: '3'
+
+
+services:
+  gateway:
+    build:
+      context: ../
+      dockerfile: src/YAMI.Gateway/Dockerfile
+    container_name: yami-gateway
+    restart: unless-stopped
+    ports:
+      - 5005:80
+    networks:
+      - yami
+
+  buyer:
+    build:
+      context: ../
+      dockerfile: src/YAMI.Buyer/Dockerfile
+    container_name: yami-buyer
+    restart: unless-stopped
+    ports:
+      - 5010:80
+    networks:
+      - yami
+
+  notifier:
+    build:
+      context: ../
+      dockerfile: src/YAMI.Notifier/Dockerfile
+    container_name: yami-notifier
+    restart: unless-stopped
+    ports:
+      - 5020:80
+    networks:
+      - yami
+
+
+networks:
+  yami:
+    name: yami
+    # external: true
