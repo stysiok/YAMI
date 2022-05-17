@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9870E597-93C6-4C10-AE87-E3D2CBCCD524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMI.Buyer", "src\YAMI.Buyer\YAMI.Buyer.csproj", "{214360D7-924E-4688-B7E2-F69991903E49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMI.Gateway", "src\YAMI.Gateway\YAMI.Gateway.csproj", "{F13DE9D2-E318-40B6-9445-AEF8FF9C4A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMI.Notifier", "src\YAMI.Notifier\YAMI.Notifier.csproj", "{461EB6BD-D419-409B-9145-9E71306E9F59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{6A80B4C1-57D3-40F4-9E73-00B2AA895AD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMI.Kraken", "src\shared\YAMI.Kraken\YAMI.Kraken.csproj", "{05C4E800-86C5-45C1-B189-6644AEA1E40A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214360D7-924E-4688-B7E2-F69991903E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214360D7-924E-4688-B7E2-F69991903E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214360D7-924E-4688-B7E2-F69991903E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214360D7-924E-4688-B7E2-F69991903E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13DE9D2-E318-40B6-9445-AEF8FF9C4A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13DE9D2-E318-40B6-9445-AEF8FF9C4A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13DE9D2-E318-40B6-9445-AEF8FF9C4A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13DE9D2-E318-40B6-9445-AEF8FF9C4A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461EB6BD-D419-409B-9145-9E71306E9F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461EB6BD-D419-409B-9145-9E71306E9F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461EB6BD-D419-409B-9145-9E71306E9F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461EB6BD-D419-409B-9145-9E71306E9F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C4E800-86C5-45C1-B189-6644AEA1E40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C4E800-86C5-45C1-B189-6644AEA1E40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C4E800-86C5-45C1-B189-6644AEA1E40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C4E800-86C5-45C1-B189-6644AEA1E40A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{214360D7-924E-4688-B7E2-F69991903E49} = {9870E597-93C6-4C10-AE87-E3D2CBCCD524}
+		{F13DE9D2-E318-40B6-9445-AEF8FF9C4A32} = {9870E597-93C6-4C10-AE87-E3D2CBCCD524}
+		{461EB6BD-D419-409B-9145-9E71306E9F59} = {9870E597-93C6-4C10-AE87-E3D2CBCCD524}
+		{6A80B4C1-57D3-40F4-9E73-00B2AA895AD4} = {9870E597-93C6-4C10-AE87-E3D2CBCCD524}
+		{05C4E800-86C5-45C1-B189-6644AEA1E40A} = {6A80B4C1-57D3-40F4-9E73-00B2AA895AD4}
+	EndGlobalSection
+EndGlobal

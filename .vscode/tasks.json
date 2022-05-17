@@ -1,0 +1,97 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-buyer",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/YAMI.Buyer/YAMI.Buyer.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "close": true
+            },
+            "isBuildCommand": true
+        },
+        {
+            "label": "build-notifier",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/YAMI.Notifier/YAMI.Notifier.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "close": true
+            },
+            "isBuildCommand": true
+        },
+        {
+            "label": "build-gateway",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/YAMI.Gateway/YAMI.Gateway.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "close": true
+            },
+            "isBuildCommand": true
+        },
+        {
+            "label": "run-buyer",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/src/YAMI.Buyer/YAMI.Buyer.csproj",
+            ],
+            "problemMatcher": "$msCompile",
+        },
+        {
+            "label": "run-notifier",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/src/YAMI.Notifier/YAMI.Notifier.csproj",
+            ],
+            "problemMatcher": "$msCompile",
+        },
+        {
+            "label": "run-gateway",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/src/YAMI.Gateway/YAMI.Gateway.csproj",
+            ],
+            "problemMatcher": "$msCompile",
+        },
+        {
+            "label": "run-all",
+            "command": "",
+            "type": "shell",
+            "dependsOn": [
+                "run-gateway",
+                "run-notifier",
+                "run-buyer"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

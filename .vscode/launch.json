@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run YAMI.Buyer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-buyer",
+            "program": "${workspaceFolder}/src/YAMI.Buyer/bin/Debug/net6.0/YAMI.Buyer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/YAMI.Buyer",
+            "stopAtEntry": false,
+        },
+        {
+            "name": "Run YAMI.Notifier",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-notifier",
+            "program": "${workspaceFolder}/src/YAMI.Notifier/bin/Debug/net6.0/YAMI.Notifier.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/YAMI.Notifier",
+            "stopAtEntry": false,
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Run YAMI.Gateway",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-gateway",
+            "program": "${workspaceFolder}/src/YAMI.Gateway/bin/Debug/net6.0/YAMI.Gateway.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/YAMI.Gateway",
+            "stopAtEntry": false,
+            "console": "externalTerminal"
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Run them all!",
+            "configurations": [
+                "Run YAMI.Buyer", "Run YAMI.Notifier", "Run YAMI.Gateway"
+            ]
+        }
+    ]
+}
