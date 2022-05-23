@@ -39,4 +39,4 @@ services:
 networks:
   yami:
     name: yami
-    # external: true
+    external: true
