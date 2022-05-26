@@ -13,12 +13,12 @@ public static class CollerationExtensions
         {
             if (!context.Request.Headers.TryGetValue(COLLERATION_ID_KEY, out var collerationId))
                 collerationId = Guid.NewGuid().ToString("N");
-            
+
             context.Items[COLLERATION_ID_KEY] = collerationId.ToString();
 
             await next();
         });
-    
+
     public static string? GetCollerationId(this HttpContext context)
         => context.Items.TryGetValue(COLLERATION_ID_KEY, out var collerationId) ? collerationId as string : null;
 
