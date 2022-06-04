@@ -4,6 +4,6 @@ namespace YAMI.Common.Messaging.Defaults;
 
 internal sealed class DefaultMessagePublisher : IMessagePublisher
 {
-    public Task PublishAsync<T>(MessagePublishPayload<T> messagePublishPayload) where T : IMessage
+    public Task PublishAsync<T>(PublishMessageEnvelope<T> messagePublishPayload) where T : IMessage
         => Task.CompletedTask;
 }

@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\shared\YAMI.Common\YAMI.Common.csproj" />
+  </ItemGroup>
+
 </Project>

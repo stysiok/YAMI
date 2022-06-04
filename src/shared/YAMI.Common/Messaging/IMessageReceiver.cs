@@ -4,5 +4,5 @@ namespace YAMI.Common.Messaging;
 
 public interface IMessageReceiver
 {
-    Task ReceiverAsync<T>(MessageReceivePayload<T> messageReceivePayload) where T : IMessage;
+    Task ReceiverAsync<T>(ReceivedMessageEnvelope<T> messageReceivePayload) where T : IMessage;
 }

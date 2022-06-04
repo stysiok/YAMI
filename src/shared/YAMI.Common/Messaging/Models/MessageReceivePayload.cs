@@ -1,3 +1,3 @@
 namespace YAMI.Common.Messaging.Models;
 
-public sealed record MessageReceivePayload<T>(MessageTopic Topic, Action<T> handler) where T : IMessage;
+public sealed record ReceivedMessageEnvelope<T>(MessageTopic Topic, Func<T, Task> Handler) where T : IMessage;
