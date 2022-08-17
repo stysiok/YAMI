@@ -5,7 +5,7 @@ using YAMI.Common.Messaging.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMessaging().AddRabbitMQ();
+builder.Services.AddMessaging().AddPulsar();
 
 var app = builder.Build();
 app.UseColleration();

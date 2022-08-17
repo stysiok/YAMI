@@ -3,7 +3,7 @@ using YAMI.Common.Messaging;
 using YAMI.Notifier.Events.Receivers;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddMessaging().AddRabbitMQ().AddHostedService<CryptoBoughtReceiver>();
+builder.Services.AddMessaging().AddPulsar().AddHostedService<CryptoBoughtReceiver>();
 
 var app = builder.Build();
 app.UseColleration();

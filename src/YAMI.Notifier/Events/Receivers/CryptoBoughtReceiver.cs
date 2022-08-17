@@ -1,5 +1,6 @@
 using YAMI.Common.Messaging;
 using YAMI.Notifier.Events.Incoming;
+using YAMI.Common.Messaging.Models;
 
 namespace YAMI.Notifier.Events.Receivers;
 
@@ -15,8 +16,14 @@ internal sealed class CryptoBoughtReceiver : BackgroundService
         _logger = logger;
     }
 
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        await _messageReceiver.ReceiverAsync<CryptoBought>(null);
+        _messageReceiver.ReceiverAsync(new ReceivedMessageEnvelope<CryptoBought>(MessageTopic.Orders, @event =>
+        {
+            // _logger.LogInformation($"Message {@event.Name} : {@event.Amount}");
+            return Task.CompletedTask;
+        }));
+
+        return Task.CompletedTask;
     }
 }

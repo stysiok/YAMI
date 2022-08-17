@@ -1,3 +1,5 @@
+using YAMI.Common.Messaging.Models;
+
 namespace YAMI.Buyer.Events.Outgoing;
 
-internal sealed record CryptoBought(string Name, int Amount) : Common.Messaging.Models.IMessage;
+internal sealed record CryptoBought(string Name, int Amount) : IMessage;

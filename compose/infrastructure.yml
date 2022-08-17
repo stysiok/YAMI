@@ -2,18 +2,25 @@ version: '3'
 
 
 services:
-  rabbitmq:
-    image: rabbitmq:3.10-management
-    container_name: yami-rabbitmq
+  pulsar:
+    image: apachepulsar/pulsar:2.9.2
+    container_name: yami-pulsar
     restart: unless-stopped
+    command: bin/pulsar standalone
     ports:
-      - 5672:5672
-      - 15672:15672
-    networks:
-      - yami
+      - 6650:6650
+      - 8080:8080
+    volumes:
+      - pulsardata:/pulsar/data
+      - pulsarconf:/pulsar/conf
+    # networks:
+    #   - yami
 
+volumes:
+  pulsardata: {}
+  pulsarconf: {}
 
-networks:
-  yami:
-    name: yami
-    external: true
+# networks:
+#   yami:
+#     name: yami
+#     external: true
