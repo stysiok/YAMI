@@ -1,9 +1,11 @@
 using YAMI.Buyer.Events.Outgoing;
 using YAMI.Common.Colleration;
+using YAMI.Common.Logging;
 using YAMI.Common.Messaging;
 using YAMI.Common.Messaging.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseLogging();
 
 builder.Services.AddMessaging().AddPulsar();
 
