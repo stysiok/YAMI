@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="DotPulsar" Version="2.3.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="5.1.1" />
   </ItemGroup>
 
 </Project>

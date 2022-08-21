@@ -5,7 +5,7 @@ using YAMI.Common.Messaging;
 using YAMI.Common.Messaging.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Host.UseLogging();
+builder.Host.UseLogging(builder.Configuration);
 
 builder.Services.AddMessaging().AddPulsar();
 

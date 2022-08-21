@@ -16,11 +16,28 @@ services:
     # networks:
     #   - yami
 
+  seq:
+    image: datalust/seq:latest
+    container_name: yami-seq
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 5341:5341
+    volumes:
+      - seqdata:/data
+    environment:
+      - ACCEPT_EULA=y
+      - SEQ_FIRSTRUN_ADMINPASSWORDHASH=FMzA7AvCLkH8NfOTFITAf3enkAxyiQqIgp7nznRWJfNSSqmzzg==
+    
+
 volumes:
   pulsardata: {}
   pulsarconf: {}
+  seqdata: {}
 
 # networks:
 #   yami:
 #     name: yami
 #     external: true
+
+# seq admin : password
